@@ -1,0 +1,12 @@
+<div class="json-formatter">
+  <textarea [(ngModel)]="rawJson" placeholder="Paste or write raw JSON here" class="p-10" rows="4"></textarea>
+  <button type="button" class="primary-button" (click)="formatJson()">Format JSON</button>
+  <button type="button" class="secondary-button" (click)="download()">Download JSON</button>
+  <div class="formatted-json">
+    <h3>Formatted JSON</h3>
+    <div *ngIf="formattedJson !== null">
+      <pre>{{ formattedJson }}</pre>
+    </div>
+  </div>
+</div>
+
